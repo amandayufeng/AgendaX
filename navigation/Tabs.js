@@ -3,7 +3,7 @@ import {View, StyleSheet, Image, Text} from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from '../pages/Home';
 //import Events from '../pages/Events';
-import ButtonNav from './ButtonNav';
+
 import Schedule from '../pages/Schedule';
 import Setting from '../pages/Setting';
 import Calendar from '../pages/Calendar'
@@ -80,19 +80,19 @@ const Tab = () => {
                               <Image
                                     resizeMode = 'contain'
                                     style = {{
-                                          marginLeft:3,
+                                          marginLeft:13,
                                           width:40,
                                           height:40,
                                     tintColor:  focused ? '#e32f45' : '#748c94'
 
                                     }}
                                     //attribution for like flaticon required... graphics pizza
-                                    source = {require('../assets/images/ranking.png')}
+                                    source = {require('../assets/images/events.png')}
 
                               />
                               <Text
                               style={{color:focused?'#e32f45' : '#748c94', fontSize:15}}
-                              >Data</Text>
+                              >Calendar</Text>
                         </View>
                         
                   }
@@ -111,7 +111,7 @@ const Tab = () => {
                                     }}
                                     //attribution for like flaticon required... graphics pizza
                                     source = {require('../assets/images/setting.png')}
-                                    key={this.state.source.uri}
+                                    //key={this.state.source.uri}
 
                               />
                               <Text
@@ -141,6 +141,10 @@ const style = StyleSheet.create({
             elevation:5
 
       },
+      icon:{
+            width: 40,
+            height: 40,
+      }
 
 })
 
