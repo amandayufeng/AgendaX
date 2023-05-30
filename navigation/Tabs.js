@@ -125,7 +125,7 @@ const Tab = () => {
                   }
                   }} />
 
-            <Tab.Screen name="Settings" component={ButtonNav} options={{ 
+            <Tab.Screen name="Settings" component={Setting} options={{ 
                   tabBarIcon:({focused}) => {
                         return <View>
                               <Image

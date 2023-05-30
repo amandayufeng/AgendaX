@@ -5,17 +5,18 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
 import Setting from '../pages/Setting';
 import About from '../pages/About';
+import Tab from './Tabs';
 
 const ButtonNav = () => {
     const Stack = createStackNavigator();
     return(
     <NavigationContainer independent = {true}>
       <Stack.Navigator
-      initialRouteName="Settings"
+      initialRouteName="Main"
       >
         <Stack.Screen 
-          name="Settings" 
-          component={Setting} 
+          name="Main" 
+          component={Tab} 
           options={{ headerShown: false }}
           />
 

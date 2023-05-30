@@ -4,13 +4,14 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Tab from './navigation/Tabs';
+import ButtonNav from './navigation/ButtonNav';
 
 
 const App = () => {
   //const Tab = createBottomTabNavigator();
     return(
         <NavigationContainer>
-          <Tab/>
+          <ButtonNav/>
         </NavigationContainer>
           
         

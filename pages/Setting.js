@@ -9,7 +9,7 @@ import { useNavigation } from '@react-navigation/native';
 const Setting = () => {
     const navigation = useNavigation();
     const toAbout = () =>{
-        navigation.navigate('About');
+        navigation.getParent().navigate('About');
         console.log("Ihr")
     }
     return(
