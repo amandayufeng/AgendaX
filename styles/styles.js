@@ -13,7 +13,8 @@ export const STYLES = StyleSheet.create({
   },
   centerContainer: {
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    padding: 5
   },
   title: {
     fontSize: 30,
@@ -39,6 +40,15 @@ export const STYLES = StyleSheet.create({
   imageBox: {
     width: 256,
     height: 256
+  },
+  button: {
+    borderColor: 'black',
+    borderWidth: 3,
+    borderRadius: 10,
+    color: 'pink',
+    height: 80,
+    width: 390
+    
   }
 });
 

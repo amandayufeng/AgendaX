@@ -7,6 +7,8 @@ import Home from '../pages/Home';
 import Schedule from '../pages/Schedule';
 import Setting from '../pages/Setting';
 import Calendar from '../pages/Calendar'
+import ButtonNav from './ButtonNav';
+import List from '../pages/List';
 
 const Tab = () => {
     const Tab = createBottomTabNavigator();
@@ -97,7 +99,33 @@ const Tab = () => {
                         
                   }
                   }} />
-            <Tab.Screen name="Settings" component={Setting} options={{ 
+                  
+            <Tab.Screen name="Lists" component={List} options={{ 
+                  tabBarIcon:({focused}) => {
+                        return <View>
+                              <Image
+                                    resizeMode = 'contain'
+                                    style = {{
+                                          marginLeft:-1,
+                                          width:40,
+                                          height:40,
+                                    tintColor:  focused ? '#e32f45' : '#748c94'
+
+                                    }}
+                                    //attribution for like flaticon required... graphics pizza
+                                    source = {require('../assets/images/to-do-list.png')}
+                                    //key={this.state.source.uri}
+
+                              />
+                              <Text
+                              style={{color:focused?'#e32f45' : '#748c94', fontSize:15}}
+                              >Lists</Text>
+                        </View>
+                        
+                  }
+                  }} />
+
+            <Tab.Screen name="Settings" component={ButtonNav} options={{ 
                   tabBarIcon:({focused}) => {
                         return <View>
                               <Image
