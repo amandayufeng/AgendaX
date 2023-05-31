@@ -1,13 +1,13 @@
 import React from 'react'
 import {View,Text,Image} from 'react-native'
 
-const Calendar = () => {
+const Home = () => {
     return(
         <View style={{backgroundColor: 'pink'}}>
-            <Text>CALENDATRRRRRRRRRRR</Text>
+            <Text>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHH</Text>
             
         </View>
     )
 }
 
-export default Calendar;
+export default Home;

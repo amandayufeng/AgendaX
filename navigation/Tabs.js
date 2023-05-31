@@ -6,9 +6,10 @@ import Home from '../pages/Home';
 
 import Schedule from '../pages/Schedule';
 import Setting from '../pages/Setting';
-import Calendar from '../pages/Calendar'
+import Calendar from '../pages/Events'
 import ButtonNav from './ButtonNav';
 import List from '../pages/List';
+import Events from '../pages/Events';
 
 const Tab = () => {
     const Tab = createBottomTabNavigator();
@@ -76,7 +77,7 @@ const Tab = () => {
                         
                   }
                   }} /> */}
-            <Tab.Screen name="Calendar" component={Calendar} options={{ 
+            <Tab.Screen name="Events" component={Events} options={{ 
                   tabBarIcon:({focused}) => {
                         return <View>
                               <Image
@@ -159,7 +160,7 @@ const Tab = () => {
 
 const style = StyleSheet.create({
       shadow:{
-            shadowColor: '#7F5DF0',
+            shadowColor: 'gray',//#7F5DF0
             shadowOffset:{
                   width:0,
                   height:10

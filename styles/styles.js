@@ -16,9 +16,17 @@ export const STYLES = StyleSheet.create({
     justifyContent: 'center',
     padding: 5
   },
+  container: {
+    backgroundColor:'pink',
+    alignItems: 'center',
+    padding: 5,
+    flex:1
+  },
   title: {
     fontSize: 30,
-    color: 'white'
+    color: 'white',
+    fontWeight: '300',
+    marginTop: 3
   },
   heading: {
     fontSize: 25
@@ -43,12 +51,19 @@ export const STYLES = StyleSheet.create({
   },
   button: {
     borderColor: 'black',
-    borderWidth: 3,
+    borderWidth: 2,
     borderRadius: 10,
     color: 'pink',
     height: 80,
-    width: 390
+    width: 390,
+    backgroundColor: 'white'
     
+  },
+  settingIcon:{
+    width:75,
+    height:75,
+    alignSelf:'flex-start',
+    marginRight: 5
   }
 });
 

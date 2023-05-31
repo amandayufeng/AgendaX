@@ -13,25 +13,27 @@ const Setting = () => {
         console.log("Ihr")
     }
     return(
-        <View style={[{backgroundColor: 'pink'},STYLES.centerContainer]}>
-            <Text>SETTTTTTTTINNNNNNGGGGGGGGGGGGGGGGGGG</Text>
+        <View style={[STYLES.container]}>
+            <Text style = {[STYLES.title]}>SETTINGS</Text>
 
 
             <TouchableOpacity 
                 style = {[STYLES.button,{marginTop:13}]}
                 onPress = {toAbout}
             >
+                <View style = {{flexDirection: 'row'}}>
+                
+                <Image
+                    resizeMode = 'contain'
+                    style = {[STYLES.settingIcon]}
+                    source = {require('../assets/images/attendance.png')}
+                />
 
-            <Image
-            resizeMode = 'contain'
-            style = {{
-                //margin cuz bad photo
-                marginLeft:7,
-                width:40,
-                height:40,
-            }}
-            source = {require('../assets/images/attendance.png')}
-            />
+                <Text
+                style = {[STYLES.heading]}
+                >About</Text>
+                </View>
+                
                                     
             </TouchableOpacity>
             
