@@ -13,11 +13,28 @@ const Events = () => {
             <Calendar
                 onDayPress={day => {
                 setSelected(day.dateString);
-            }}
-            markedDates={{
-                [selected]: {selected: true, disableTouchEvent: true, selectedDotColor: 'orange'}
-            }}
+                console.log(day)
+                }}
+                markingType={'period'}
+                markedDates={{
+                [selected]: {selected: true, disableTouchEvent: true, selectedColor: 'pink'},
+                '2023-05-06': {marked: true, dotColor: '#50cebb'},
+                }}
+                theme={{
+                    backgroundColor: '#ffffff',
+                    calendarBackground: '#ffffff',
+                    textSectionTitleColor: 'purple', //colors days of week
+                    selectedDayBackgroundColor: '#00adf5',
+                    selectedDayTextColor: '#ffffff',
+                    todayTextColor: '#00adf5',
+                    dayTextColor: '#2d4150',
+                    textDisabledColor: 'gray'
+                }}
+                
+                
             />
+            
+
             
         </View>
     )

@@ -1,6 +1,7 @@
 //import React from 'react';
 import {View, StyleSheet, Image, Text} from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import Home from '../pages/Home';
 //import Events from '../pages/Events';
 
@@ -10,9 +11,35 @@ import Calendar from '../pages/Events'
 import ButtonNav from './ButtonNav';
 import List from '../pages/List';
 import Events from '../pages/Events';
+import About from '../pages/About';
 
 const Tab = () => {
     const Tab = createBottomTabNavigator();
+
+    const CustomBarButton=({children, onPress} ) => {
+      <TouchableOpacity
+            style={{
+                  bottom:30,
+                  justifyContent:'center',
+                  alignItems:'center',
+                  ...style.shadow
+            }}
+            onPress={onPress}
+      >
+            <View
+                  style={{
+                        width:70,
+                        height:70,
+                        borderRadius: 35,
+                        backgroundColor:'#e32f45'
+                  }}
+            >
+                  {children}
+            </View>
+      </TouchableOpacity>
+
+    }
+
       return(
 
             <Tab.Navigator 
@@ -21,13 +48,13 @@ const Tab = () => {
                         tabBarShowLabel: false,
                         tabBarStyle:{
                               position:'absolute',
-                              bottom:25,
-                              left:20,
-                              right:20,
+                              //bottom:25,
+                              //left:20,
+                              //right:20,
                               elevation:10,
                               backgroundColor: '#ffffff',
-                              borderRadius: 15,
-                              height:100,
+                              //borderRadius: 15,
+                              height:75,
                               ...style.shadow
                         }
 
@@ -39,8 +66,8 @@ const Tab = () => {
                               <Image
                                     resizeMode = 'contain'
                                     style = {{
-                                          width:40,
-                                          height:40,
+                                          width:30,
+                                          height:30,
                                     tintColor:  focused ? '#e32f45' : '#748c94'
 
                                     }}
@@ -84,8 +111,8 @@ const Tab = () => {
                                     resizeMode = 'contain'
                                     style = {{
                                           marginLeft:13,
-                                          width:40,
-                                          height:40,
+                                          width:30,
+                                          height:30,
                                     tintColor:  focused ? '#e32f45' : '#748c94'
 
                                     }}
@@ -100,16 +127,99 @@ const Tab = () => {
                         
                   }
                   }} />
+
+                  {/* <Tab.Screen name="Modal" component={About} 
+                  options={{ 
+                  tabBarIcon:({focused}) => (
+                        
+                              <Image
+                                    resizeMode = 'contain'
+                                    style = {{
+                                          width:30,
+                                          height:30,
+                                    tintColor:  focused ? '#e32f45' : '#748c94'
+
+                                    }}
+                                    //attribution for like flaticon required... graphics pizza
+                                    source = {require('../assets/images/events.png')}
+
+                              />
+                              
                   
-            <Tab.Screen name="Lists" component={List} options={{ 
+                        
+                  ),
+                  tabBarButton: (props) => (
+                        <CustomBarButton
+                        {...props}
+                        />
+                  )
+
+                  }} /> */}
+                  
+            <Tab.Screen name="Modal" component={List} options={{ 
                   tabBarIcon:({focused}) => {
                         return <View>
                               <Image
                                     resizeMode = 'contain'
                                     style = {{
                                           marginLeft:-1,
-                                          width:40,
-                                          height:40,
+                                          width:30,
+                                          height:30,
+                                    tintColor:  focused ? '#e32f45' : '#748c94'
+
+                                    }}
+                                    //attribution for like flaticon required... graphics pizza
+                                    source = {require('../assets/images/to-do-list.png')}
+                                    //key={this.state.source.uri}
+
+                              />
+                              
+                        </View>
+                        
+                  },
+                  /* tabBarButton: (props) => (
+                        <CustomBarButton
+                              onPress={console.log}
+
+                        />
+                  ) */
+                  tabBarButton: (props) => (
+                        <TouchableOpacity
+                        style={{
+                              top:-30,
+                              justifyContent:'center',
+                              alignItems:'center',
+                        }}
+                        //onPress={console.log("hi")}
+                       /*  {...props}
+                        onPress={()=>{console.log("hi")}} */
+                  >
+                        <View
+                              style={{
+                                    width:75,
+                                    height:75,
+                                    borderRadius: 40,
+                                    backgroundColor:'#e32f45'
+                              }}
+                        >
+                             <Text>HI</Text>
+                        </View>
+                  </TouchableOpacity>
+                  )
+                        
+
+
+                  }} />
+
+            <Tab.Screen name="List" component={List} options={{ 
+                  tabBarIcon:({focused}) => {
+                        return <View>
+                              <Image
+                                    resizeMode = 'contain'
+                                    style = {{
+                                          marginLeft:-1,
+                                          width:30,
+                                          height:30,
                                     tintColor:  focused ? '#e32f45' : '#748c94'
 
                                     }}
@@ -133,8 +243,8 @@ const Tab = () => {
                                     resizeMode = 'contain'
                                     style = {{
                                           marginLeft:3,
-                                          width:40,
-                                          height:40,
+                                          width:30,
+                                          height:30,
                                     tintColor:  focused ? '#e32f45' : '#748c94'
 
                                     }}

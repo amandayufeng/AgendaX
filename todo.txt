@@ -1,0 +1,5 @@
+- Design the visuals + how this is going to work
+- remake calendar using the libray
+- make the categorized List
+- beable to time block (like add stuff to set time blocking)
+- dark mode?
