@@ -14,7 +14,7 @@ const Setting = () => {
     }
     return(
         <View style={[STYLES.container]}>
-            <Text style = {[STYLES.title]}>SETTINGS</Text>
+            <Text style = {[STYLES.title]}>Settings</Text>
 
 
             <TouchableOpacity 
@@ -23,14 +23,14 @@ const Setting = () => {
             >
                 <View style = {{flexDirection: 'row'}}>
                 
-                <Image
+               {/*  <Image
                     resizeMode = 'contain'
                     style = {[STYLES.settingIcon]}
                     source = {require('../assets/images/attendance.png')}
-                />
+                /> */}
 
                 <Text
-                style = {[STYLES.heading]}
+                style = {[STYLES.heading,{padding:20}]}
                 >About</Text>
                 </View>
                 

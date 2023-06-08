@@ -1,5 +1,5 @@
 //import React from 'react';
-import {View, StyleSheet, Image, Text} from 'react-native'
+import {View, StyleSheet, Image, Text, Modal,useState} from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Home from '../pages/Home';
@@ -12,8 +12,10 @@ import ButtonNav from './ButtonNav';
 import List from '../pages/List';
 import Events from '../pages/Events';
 import About from '../pages/About';
+import { STYLES } from '../styles/styles';
 
 const Tab = () => {
+    //const [modalVisible, setModalVisible] = useState(false);
     const Tab = createBottomTabNavigator();
 
     const CustomBarButton=({children, onPress} ) => {
@@ -202,7 +204,25 @@ const Tab = () => {
                                     backgroundColor:'#e32f45'
                               }}
                         >
-                             <Text>HI</Text>
+                              {/* <Modal
+                                    animationType="slide"
+                                    transparent={true}
+                                    visible={modalVisible}
+                                    onRequestClose={() => {
+                                          Alert.alert('Modal has been closed.');
+                                          setModalVisible(!modalVisible);
+                                    }}>
+                              <View>
+                                    <View>
+            
+                              <TouchableOpacity
+                                    style={[styles.button, styles.buttonClose]}
+                                    onPress={() => setModalVisible(!modalVisible)}>
+                                    <Text style={styles.textStyle}>Hide Modal</Text>
+                              </TouchableOpacity>
+                              </View>
+                              </View>
+                              </Modal> */}
                         </View>
                   </TouchableOpacity>
                   )

@@ -15,15 +15,15 @@ const Events = () => {
                 setSelected(day.dateString);
                 console.log(day)
                 }}
-                markingType={'period'}
+                //markingType={'period'}
                 markedDates={{
-                [selected]: {selected: true, disableTouchEvent: true, selectedColor: 'pink'},
-                '2023-05-06': {marked: true, dotColor: '#50cebb'},
+                [selected]: {selected: true, disableTouchEvent: true, selectedDotColor: 'pink'},
+                //'2023-05-06': {marked: true, dotColor: '#50cebb'},
                 }}
                 theme={{
                     backgroundColor: '#ffffff',
                     calendarBackground: '#ffffff',
-                    textSectionTitleColor: 'purple', //colors days of week
+                    textSectionTitleColor: 'pink', //colors days of week
                     selectedDayBackgroundColor: '#00adf5',
                     selectedDayTextColor: '#ffffff',
                     todayTextColor: '#00adf5',
